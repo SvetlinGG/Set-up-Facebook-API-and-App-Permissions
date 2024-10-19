@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Facebook Ads Tracker",
+    "version": "1.0",
+    "description": "Track user activity and send it to Facebook Ads Manager.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
